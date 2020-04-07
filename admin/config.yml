@@ -2,6 +2,7 @@ backend:
   name: github
   repo: arlanthir/makersclub # Path to your GitHub repository
 
+media_folder: "assets/media/uploads"
 
 collections:
   - name: "workshops" # Used in routes, e.g., /admin/collections/blog
