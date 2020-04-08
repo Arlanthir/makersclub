@@ -1,6 +1,7 @@
 backend:
-  name: github
-  repo: arlanthir/makersclub # Path to your GitHub repository
+  #name: github
+  #repo: arlanthir/makersclub # Path to your GitHub repository
+  name: git-gateway
 
 media_folder: "assets/media/uploads"
 
