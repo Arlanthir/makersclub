@@ -16,6 +16,11 @@ layout: default
         {% assign posts = site.posts %}
     {% endif %}
 
+    {% for topic in site.topics %}
+        <a href="{{ topic.url }}"><h2>{{ topic.title }} - {{ topic.slug }}</h2></a>
+        <!-- <p>{{ workshop.content | markdownify }}</p> -->
+    {% endfor %}
+
     {% for workshop in site.workshops %}
         <a href="{{ workshop.url }}"><h2>{{ workshop.title }} - {{ workshop.date | date: "%d %B %Y" }}</h2></a>
         <!-- <p>{{ workshop.content | markdownify }}</p> -->
@@ -70,6 +75,8 @@ layout: default
     {%- endif -%}
 
 </div>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfsCmgsfEnITUfmBdRlFBDNOA_YXoe9DlVxAwuO8T6MRohF5g/viewform?embedded=true" width="640" height="1491" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 <!-- Netlify Identity Widget Redirect to Admin -->
 <script>

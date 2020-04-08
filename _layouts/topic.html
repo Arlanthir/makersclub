@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+Isto é a categoria {{ page.title }}
+
+Slug: {{ page.slug }}
+
+{% assign workshops = site.workshops | where: "topics",page.slug %}
+
+{% for workshop in workshops %}
+<a href="{{ workshop.url }}"><h2>{{ workshop.title }} - {{ workshop.date | date: "%d %B %Y" }}</h2></a>
+<!-- <p>{{ workshop.content | markdownify }}</p> -->
+{% endfor %}
+
+
+{{ content }}

@@ -1,9 +1,10 @@
 ---
 title: Workshop do Pão
 author: Vanessa e Natacha Ruivo
-date: 2020-06-01
+date: 2020-04-02
 workshop_date: 2020-06-01
 rating: 5
+topics: gastronomia
 ---
 
 Venha aprender a fazer pão como nunca pensou na vida!

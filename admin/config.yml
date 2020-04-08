@@ -6,6 +6,16 @@ backend:
 media_folder: "assets/media/uploads"
 
 collections:
+  - name: "topics" # Used in routes, e.g., /admin/collections/blog
+    label: "Topic" # Used in the UI
+    folder: "collections/_topics" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    #slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "workshops" # Used in routes, e.g., /admin/collections/blog
     label: "Workshop" # Used in the UI
     folder: "collections/_workshops" # The path to the folder where the documents are stored
@@ -19,4 +29,5 @@ collections:
       - {label: "Workshop Date", name: "workshop_date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
+      - {label: "Topics", name: "topics", widget: "relation", collection: "topic", displayFields: ["title"], searchFields: ["title", "slug"], valueField: "slug", multiple: true}
       - {label: "Body", name: "body", widget: "markdown"}
